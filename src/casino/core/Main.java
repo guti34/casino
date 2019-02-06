@@ -2,6 +2,7 @@ package casino.core;
 
 public class Main {
 
+	
 	public static void main(String args[]){
 		Casino casino=Casino.getCasino();
 		// on crée un croupier qui entre au casino
@@ -13,7 +14,7 @@ public class Main {
 		// on crée deux joueurs
 		JoueurDe7 simplet=new JoueurDe7("simplet", 500);
 		JoueurSansPeur bayard=new JoueurSansPeur("bayard", 500);
-		// qui entre au casino
+		// qui entrent au casino
 		casino.entre(simplet);
 		casino.entre(bayard);
 		
