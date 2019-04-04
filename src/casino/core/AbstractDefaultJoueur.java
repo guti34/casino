@@ -3,6 +3,7 @@ package casino.core;
 public abstract class AbstractDefaultJoueur implements Joueur,Personne{
 	protected int mes_sous;
 	private String nom;
+	public Boolean partiegagnée = false;
 	
 	public AbstractDefaultJoueur(String nom,int solde){
 		this.mes_sous=solde;
@@ -15,6 +16,7 @@ public abstract class AbstractDefaultJoueur implements Joueur,Personne{
 	@Override
 	public void encaisse(int montant){
 		mes_sous+=montant;
+		partiegagnée = true;
 	}
 	@Override
 	public String getName() {		

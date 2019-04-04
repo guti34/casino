@@ -12,7 +12,7 @@ public class JoueurDe7 extends AbstractDefaultJoueur {
 	public void joue(Partie partie) {
 		if(getSolde()>0){
 		mes_sous--;
-		Mise mise = new Mise(this, 1, 7);
+		Mise mise = new Mise(this, 1, 7,2);
 		partie.mise(mise);
 		}
 	}

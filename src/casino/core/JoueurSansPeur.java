@@ -17,7 +17,7 @@ public class JoueurSansPeur extends AbstractDefaultJoueur {
 		int num = random.nextInt(37);
 		if (num > 0) {
 			mes_sous -= num;
-			Mise mise = new Mise(this, num, num);
+			Mise mise = new Mise(this, num, num,2);
 			partie.mise(mise);
 		}
 	}

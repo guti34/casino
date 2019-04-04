@@ -60,8 +60,14 @@ public class Croupier implements Personne{
 		// je paye les joueurs
 		for(Mise mise:mises)
 		{
+			int aPayer;
 			if(mise.getNumeros()[0]==numero_sorti){
-				int aPayer=mise.getMontant()*36;
+				aPayer=mise.getMontant()*36;
+				caisse-=aPayer;
+				mise.getJoueur().encaisse(aPayer);
+			}
+			if(numero_sorti!=0 && mise.getParité()==(numero_sorti % 2)) {
+				aPayer=mise.getMontant()*2;
 				caisse-=aPayer;
 				mise.getJoueur().encaisse(aPayer);
 			}
